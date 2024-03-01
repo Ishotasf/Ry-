@@ -57,18 +57,18 @@ async def get_readable_time(seconds: int) -> str:
 async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    ping = await eor(ping, "**⚡**")
-    await ping.edit("**DANTE⚡**")
-    await ping.edit("**DAN⚡**")
-    await ping.edit("**D⚡**")
-    await ping.edit("**⚡DANTE⚡**")
+    ping = await eor(ping, "**HAI 👋🏻**")
+    await ping.edit("**I AM RYN**")
+    await ping.edit("**IYAA GUA RYN⚡**")
+    await ping.edit("**RYN USERBOT⚡**")
+    await ping.edit("**⚡YOSHIEKI RYN⚡**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
     await ping.edit("⚡")
     sleep(3)
     await ping.edit(
-        f"**Dante UBot**\n\n"
+        f"**Ryn UBot**\n\n"
         f"**Ping!! :** `%sms`\n"
         f"**UpTime :** `{uptime}` \n"
         f"**Owner :** {user.first_name} (tg://user?id={user.id})" % (duration)
@@ -110,7 +110,7 @@ async def _(ping):
     )
 
 
-@kazu_cmd(pattern="Dping$")
+@kazu_cmd(pattern="Rping$")
 @devs_cmd(incoming=True, from_users=DEVLIST, pattern=r"^Kping$")
 async def _(pong):
     await get_readable_time((time.time() - StartTime))
@@ -124,7 +124,7 @@ async def _(pong):
     user = await pong.client.get_me()
     await kopong.edit(
         f"**NIH** "
-        f"\nDante UBot `%sms` \n"
+        f"\nRyn UBot `%sms` \n"
         f"**Yoo!!** "
         f"\nSalken! Saya {user.first_name} (tg://user?id={user.id})』 \n" % (duration)
     )
@@ -133,7 +133,7 @@ async def _(pong):
 # .keping & kping Coded by Koala
 
 
-@kazu_cmd(pattern=r"Dan$")
+@kazu_cmd(pattern=r"Ryn$")
 @devs_cmd(incoming=True, from_users=DEVLIST, pattern=r"^Kaz$")
 async def _(pong):
     uptime = await get_readable_time((time.time() - StartTime))
@@ -148,10 +148,10 @@ async def _(pong):
     await kping.edit("**100% ██████████**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
-    await kping.edit("DANTE UBOT DIMULAI...")
+    await kping.edit("RYN UBOT DIMULAI...")
     sleep(3)
     await kping.edit(
-        f"**Saya Active Tuan Dante ^⁠_⁠^ !!**\n**Ping!!** : %sms\n**Uptime** : {uptime}🕛" % (duration)
+        f"**Saya Active Tuan Yoshieki Ryn ^⁠_⁠^ !!**\n**Ping!!** : %sms\n**Uptime** : {uptime}🕛" % (duration)
     )
 
 
@@ -189,8 +189,8 @@ async def _(speed):
 @kazu_cmd(pattern="pong$")
 async def _(pong):
     start = datetime.now()
-    xx = await eor(pong, "`Assalamualaikum Tuan`")
-    await xx.edit("Waalaikumsalam.....")
+    xx = await eor(pong, "**Assalamualaikum Tuan**")
+    await xx.edit("**Waalaikumsalam.....**")
     end = datetime.now()
     duration = (end - start).microseconds / 9000
     await xx.edit("Tunggu...")
