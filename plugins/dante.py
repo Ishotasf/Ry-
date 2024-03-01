@@ -1,6 +1,6 @@
 
 """
-Perintah Tersedia Untuk UBot Dante 
+Perintah Tersedia Untuk UBot Ryn 
 
 •`{i}epek`
 
@@ -95,25 +95,25 @@ async def _(event):
 
 @kazu_cmd(outgoing=True, pattern="love")
 async def _(event):
-    xx = await event.eor("`hai kak:v`")
+    xx = await event.eor("**hai kak:v**")
     sleep(1)
-    await event.eor("`bole kenalan ga?`")
+    await event.eor("**bole kenalan ga?**")
     sleep(1)
-    await event.eor("`kalau ga bole gpp`")
+    await event.eor("**kalau ga bole gpp**")
     sleep(1)
-    await event.eor("`tapi boong bhahaha`")
+    await event.eor("**tapi boong bhahaha**")
     sleep(1)
-    await event.eor("`tapi tapi kamu nya imut umm`")
+    await event.eor("**tapi tapi kamu nya imut umm**")
     sleep(1)
-    await event.eor("`pengen doain kamu biar bisa dapatin kamu umm`")
+    await event.eor("**pengen doain kamu biar bisa dapatin kamu umm**")
     sleep(1)
-    await event.eor("`HAHAHAHAHAHAHA`")
+    await event.eor("**HAHAHAHAHAHAHA*"")
     sleep(1)
-    await event.eor("`BERCANDA KOK`")
+    await event.eor("**BERCANDA KOK**")
     sleep(1)
-    await event.eor("`ni ni aku kasih sesuatu`")
+    await event.eor("**ni ni aku kasih sesuatu**")
     sleep(1)
-    await event.eor("`LOVE YOU MOGA SELALU BAHAGIA YA 🤍`")
+    await event.eor("**LOVE YOU MOGA SELALU BAHAGIA YA 🤍**")
 # Create by myself @localheart
 
 @kazu_cmd(outgoing=True, pattern="halah")
