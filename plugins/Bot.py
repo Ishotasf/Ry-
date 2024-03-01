@@ -74,21 +74,21 @@ def KAZUPIC():
 
 buttons = [
     [
-        Button.url(get_string("bot_3"), "https://Usern4meDoesNotExist404"),
-        Button.url(get_string("bot_4"), "t.me/UBot_Telegram"),
+        Button.url(get_string("bot_3"), "https://Usern4meDoestExist404"),
+        Button.url(get_string("bot_4"), "t.me/Rxvthv"),
     ]
 ]
 
 # Will move to strings
 alive_txt = """
-ᴅᴀɴᴛᴇ ᴜʙᴏᴛ​
+ʀʏɴ ᴜʙᴏᴛ​
 
   ▢ Version - {}
-  ▢ Dante - {}
+  ▢ RynUbot - {}
   ▢ Telethon - {}
 """
 
-in_alive = "{}\n\n▢ <b>Dante Version -><b> <code>{}</code>\n▢ <b>Dante -></b> <code>{}</code>\n▢ <b>Python -></b> <code>{}</code>\n▢ <b>Waktu aktif -></b> <code>{}</code>\n▢ <b>\n\n• <b>▢ ᴅᴀɴᴛᴇ ᴜʙᴏᴛ​</b>"
+in_alive = "{}\n\n▢ <b>Ryn Version -><b> <code>{}</code>\n▢ <b>Ryn -></b> <code>{}</code>\n▢ <b>Python -></b> <code>{}</code>\n▢ <b>Waktu aktif -></b> <code>{}</code>\n▢ <b>\n\n▢ <b>▢ ʀʏɴ ᴜʙᴏᴛ​</b>"
 
 
 async def get_readable_time(seconds: int) -> str:
@@ -311,7 +311,7 @@ async def inline_alive(ayra):
                     await builder.document(
                         pic,
                         title="Inline Alive",
-                        description="▢ ᴅᴀɴᴛᴇ ᴜʙᴏᴛ",
+                        description="▢ ʀʏɴ ᴜʙᴏᴛ",
                         parse_mode="html",
                         buttons=buttons,
                     )
