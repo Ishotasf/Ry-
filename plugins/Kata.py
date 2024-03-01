@@ -57,7 +57,7 @@ async def _(event):
     sleep(3)
     await xx.edit("Cuma Mau Bilang")
     sleep(2)
-    await xx.edit("Kalo Dante Itu...")
+    await xx.edit("Kalo Ryn Itu...")
     sleep(1)
     await xx.edit("Setia Mhehe")
 
@@ -134,7 +134,7 @@ async def _(event):
 async def _(event):
     await event.client.send_message(
         event.chat_id,
-        "Dante Userbot Active!",
+        "Ryn Userbot Active!",
         reply_to=event.reply_to_msg_id,
     )
     
