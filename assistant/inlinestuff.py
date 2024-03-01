@@ -32,8 +32,8 @@ from . import _kazu_cache
 
 SUP_BUTTONS = [
     [
-        Button.url("• Owner •", url="https://t.me/Usern4meDoesNotExist404"),
-        Button.url("• Support •", url="t.me/SpotifyStream_Id"),
+        Button.url("• Owner •", url="https://t.me/Usern4meDoestExist404"),
+        Button.url("• Support •", url="t.me/CariSahabatOnline_Id"),
     ],
 ]
 
@@ -169,10 +169,10 @@ async def _(e):
 async def repo(e):
     res = [
         await e.builder.article(
-            title="Dante Ubot",
+            title="Ryn Ubot",
             description="Ubot | Telethon",
             thumb=wb(kazupic, 0, "image/jpeg", []),
-            text="**ᴅᴀɴᴛᴇ ᴜʙᴏᴛ​**",
+            text="**ʀʏɴ ᴜʙᴏᴛ​**",
             buttons=SUP_BUTTONS,
         ),
     ]
@@ -241,7 +241,7 @@ async def _(e):
         title = a.get("title")
         desc = a.get("snippet")
         link = a.get("link")
-        text = f"**••Tɪᴛʟᴇ••** `{title}`\n\n"
+        text = f"**Tɪᴛʟᴇ** `{title}`\n\n"
         text += f"**Dᴇsᴄʀɪᴘᴛɪᴏɴ** `{desc}`"
         modss.append(
             await e.builder.article(
@@ -302,9 +302,9 @@ async def _(e):
         name = z["title"]
         desc = unescape(z["summary"])[:300].replace("<br>", "\n") + "..."
         dev = z["developer"]["devId"]
-        text = f"**••Aᴘᴘ Nᴀᴍᴇ••** [{name}]({url})\n"
-        text += f"**••Dᴇᴠᴇʟᴏᴘᴇʀ••** `{dev}`\n"
-        text += f"**••Dᴇsᴄʀɪᴘᴛɪᴏɴ••**\n`{desc}`"
+        text = f"**Aᴘᴘ Nᴀᴍᴇ** [{name}]({url})\n"
+        text += f"**Dᴇᴠᴇʟᴏᴘᴇʀ** `{dev}`\n"
+        text += f"**Dᴇsᴄʀɪᴘᴛɪᴏɴ**\n`{desc}`"
         foles.append(
             await e.builder.article(
                 title=name,
@@ -574,8 +574,8 @@ async def inline_tl(ay):
             [
                 await ay.builder.article(
                     title="How to Use?",
-                    description="By Dante",
-                    url="https://t.me/SpotifyStream_Id",
+                    description="By Yoshieki Ryn",
+                    url="https://t.me/CariSahabatOnline_Id",
                     text=text,
                 )
             ],
@@ -598,7 +598,7 @@ async def inline_tl(ay):
                 await ay.builder.article(
                     title=key.__name__,
                     description=tyyp,
-                    url="https://t.me/SpotifyStream_Id",
+                    url="https://t.me/CariSahabatOnline_Id",
                     text=text[:4000],
                 )
             )
