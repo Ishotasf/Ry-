@@ -47,7 +47,7 @@ if run_as_module:
         os.remove(file)
 
     HOSTED_ON = where_hosted()
-    LOGS = getLogger("DanteLogs")
+    LOGS = getLogger("RynLogs")
     TelethonLogger = getLogger("Telethon")
     TelethonLogger.setLevel(INFO)
 
@@ -87,9 +87,9 @@ if run_as_module:
     )
 
     LOGS.info(f"Python version - {platform.python_version()}")
-    LOGS.info(f"py-Dante Version - {__kazu__}")
+    LOGS.info(f"py-RynUbot Version - {__kazu__}")
     LOGS.info(f"Telethon Version - {__version__} [Layer: {LAYER}]")
-    LOGS.info(f"Dante Version - {kazu_version} [{HOSTED_ON}]")
+    LOGS.info(f"RynUbot Version - {kazu_version} [{HOSTED_ON}]")
 
     try:
         from safety.tools import *
