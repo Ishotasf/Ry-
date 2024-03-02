@@ -66,7 +66,7 @@ if sys.argv[0] == "-m":
             validate_session(Var.SESSION, LOGS),
             udB=udB,
             app_version=kazu_version,
-            device_model="Dante",
+            device_model="Ryn",
         )
         kazu_bot.run_in_loop(autobot())
 
@@ -89,15 +89,15 @@ if sys.argv[0] == "-m":
     _version_changes(udB)
 
     HNDLR = udB.get_key("HNDLR") or "."
-    SUDOS = udB.get_key("SUDOS") or "940232666"
-    VC_SUDOS = udB.get_key("VC_SUDOS") or "940232666"
+    SUDOS = udB.get_key("SUDOS") or "936922513"
+    VC_SUDOS = udB.get_key("VC_SUDOS") or "936922513"
     DUAL_HNDLR = udB.get_key("DUAL_HNDLR") or "/"
     SUDO_HNDLR = udB.get_key("SUDO_HNDLR") or "NO_HNDLR"
 else:
-    print("Dante-Ubot")
+    print("Ryn-Ubot")
 
     from logging import getLogger
 
-    LOGS = getLogger("Dante")
+    LOGS = getLogger("Ryn")
 
     kazu_bot = asst = udB = vcClient = None
