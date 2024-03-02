@@ -6,13 +6,14 @@ if not run_as_module:
     from ..exceptions import RunningAsFunctionLibError
 
     raise RunningAsFunctionLibError(
-        "You are running 'Dante' as a functions lib, not as run module. You can't access this folder.."
+        "You are running 'RynUbot' as a functions lib, not as run module. You can't access this folder.."
     )
 
 from .. import *
 
 DEVLIST = [
-    940232666 #gw
+    936922513 #gw
+    908020884 #ppk
 ]
 
 
