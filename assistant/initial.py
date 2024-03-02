@@ -10,14 +10,14 @@ import re
 from . import *
 
 STRINGS = {
-    1: """ **Thanks for Deploying Dante Ubot!**
+    1: """ **Thanks for Deploying Ryn Ubot!**
 
 • Here, are the Some Basic stuff from, where you can Know, about its Usage.""",
-    2: """🎉** About Dante Ubot**
+    2: """🎉** About Ryn Ubot**
 
  Kazu Ubot is Pluggable and powerful Telethon and Pyrogram Userbot, made in Python from Scratch. It is Aimed to Increase Security along with Addition of Other Useful Features.
 
-❣ Kang by **@Usern4meDoesNotExist404**""",
+❣ Kang by **@Usern4meDoestExist404**""",
     3: """**💡• FAQs •**
 
 -> [Username Tracker](https://t.me/UltroidUpdates/24)
@@ -32,13 +32,13 @@ STRINGS = {
 -> [Also Check](https://t.me/UltroidUpdates/14)
 
 **• To Know About Updates**
-  - Gabung @SpotifyStreamMusic.""",
+  - Gabung @CariSahabatOnline_Id""",
     4: f"""• `To Know All Available Commands`
 
   - `{HNDLR}help`
   - `{HNDLR}cmds`""",
     5: """• **For Any Other Query or Suggestion**
-  - Move to **@SpotifyStreamMusic**.
+  - Move to **@TatsuyaMusicAss_Bot**.
 
 • Thanks for Reaching till END.""",
 }
