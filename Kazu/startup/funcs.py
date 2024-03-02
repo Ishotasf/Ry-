@@ -99,10 +99,10 @@ async def join_ajg():
     from .. import kazu_bot
 
     try:
-        await kazu_bot(JoinChannelRequest("SpotifyStreamMusic"))        
+        await kazu_bot(JoinChannelRequest("CariSahabatOnline_Id"))        
     except rpcerrorlist.ChannelPrivateError:
         print(
-            "Hallo, Salken Saya Dante!"
+            "Hallo, Salken Saya Yoshieki Ryn!"
         )
         sys.exit(1)
 
@@ -248,8 +248,8 @@ async def autopilot():
         try:
             r = await kazu_bot(
                 CreateChannelRequest(
-                    title="Logs Dante Ubot",
-                    about="Logs Dante Ubot \n\n By @SpotifyStreamMusic",
+                    title="Logs Yoshieki Ryn Ubot",
+                    about="Logs Yoshieki Ryn Ubot \n\n By @CariSahabatOnline_Od",
                     megagroup=True,
                 ),
             )
@@ -384,7 +384,7 @@ async def customize():
         await asyncio.sleep(1)
         await kazu_bot.send_message(
             "botfather",
-            f"Powerful Dante Assistant Bot \n▢ Master ~ {sir} \n\n▢ Powered By ~ @SpotifyStreamMusic",
+            f"Powerful Ryn Assistant Bot \n▢ Master ~ {sir} \n\n▢ Powered By ~ @CariSahabatOnline_Id",
         )
         await asyncio.sleep(2)
         await msg.edit("Completed **Auto Customisation** at @BotFather.")
@@ -408,7 +408,7 @@ async def plug(plugin_channels):
         os.mkdir("addons")
     if not os.path.exists("addons/__init__.py"):
         with open("addons/__init__.py", "w") as f:
-            f.write("from plugins import *\n\nbot = Dante_bot")
+            f.write("from plugins import *\n\nbot = Ryn_bot")
     LOGS.info("• Loading Plugins from Plugin Channel(s) •")
     for chat in plugin_channels:
         LOGS.info(f"{'•'*4} {chat}")
@@ -442,13 +442,13 @@ async def ready():
     chat_id = udB.get_key("LOG_CHANNEL")
     spam_sent = None
     if not udB.get_key("INIT_DEPLOY"):  # Detailed Message at Initial Deploy
-        MSG = """ **Thanks for Deploying Dante Ubot!**
+        MSG = """ **Thanks for Deploying Ryn Ubot!**
 • Here, are the Some Basic stuff from, where you can Know, about its Usage."""
         PHOTO = "https://mallucampaign.in/images/img_1708346123.jpg"
         BTTS = Button.inline("• Click to Start •", "initft_2")
         udB.set_key("INIT_DEPLOY", "Done")
     else:
-        MSG = f"**Dante Ubot has been deployed!**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode**: {inline_mention(kazu_bot.me)}\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖➖\n**Support**: @kazusupportgrp\n➖➖➖➖➖➖➖➖➖➖"
+        MSG = f"**Ryn Ubot has been deployed!**\n➖➖➖➖➖➖➖➖➖➖\n**UserMode**: {inline_mention(kazu_bot.me)}\n**Assistant**: @{asst.me.username}\n➖➖➖➖➖➖➖➖➖➖\n**Support**: @CariSahabatOnline_Id\n➖➖➖➖➖➖➖➖➖➖"
         BTTS, PHOTO = None, None
         if prev_spam := udB.get_key("LAST_UPDATE_LOG_SPAM"):
             try:
