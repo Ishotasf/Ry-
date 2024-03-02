@@ -12,8 +12,7 @@ if not run_as_module:
 from .. import *
 
 DEVLIST = [
-    936922513 #gw
-    908020884 #ppk
+    908020884 #gw
 ]
 
 
