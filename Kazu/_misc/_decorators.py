@@ -167,12 +167,12 @@ def kazu_cmd(
                 LOGS.exception(e)
                 date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
                 naam = get_display_name(chat)
-                ftext = "**Dante Client Error:** `Forward this to` @SpotifyStream_Id\n\n"
+                ftext = "**Dante Client Error:** `Forward this to` @CariSahabatOnline_Id\n\n"
                 ftext += f"**Dante Version:** `{str(pyver)}"
                 ftext += "`\n**Userbot Version:** `" + str(kazu_ver)
                 ftext += "`\n**Telethon Version:** `" + str(telever)
                 ftext += f"`\n**Hosted At:** `{HOSTED_ON}`\n\n"
-                ftext += "--------START DANTE CRASH LOG--------"
+                ftext += "--------START RYNUBOT CRASH LOG--------"
                 ftext += "\n**Date:** `" + date
                 ftext += "`\n**Group:** `" + str(ay.chat_id) + "` " + str(naam)
                 ftext += "\n**Sender ID:** `" + str(ay.sender_id)
@@ -183,7 +183,7 @@ def kazu_cmd(
                 ftext += str(format_exc())
                 ftext += "`\n\n**Error text:**`\n"
                 ftext += str(sys.exc_info()[1])
-                ftext += "`\n\n--------END DANTE CRASH LOG--------"
+                ftext += "`\n\n--------END RYNUBOT CRASH LOG--------"
                 ftext += "\n\n\n**Last 5 commits:**`\n"
 
                 stdout, stderr = await bash('git log --pretty=format:"%an: %s" -5')
