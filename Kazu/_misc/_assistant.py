@@ -21,10 +21,10 @@ from . import append_or_update, owner_and_sudos
 OWNER = kazu_bot.full_name
 
 MSG = f"""
-**ᴅᴀɴᴛᴇ ᴜʙᴏᴛ​**
+**ʀʏɴ ᴜʙᴏᴛ​**
 ➖➖➖➖➖➖➖➖➖➖
 **Owner**: [{OWNER}](tg://user?id={kazu_bot.uid})
-**Support**: @SpotifyStream_Id
+**Support**: @CariSahabatOnline_Id
 ➖➖➖➖➖➖➖➖➖➖
 """
 
@@ -32,9 +32,9 @@ IN_BTTS = [
     [
         Button.url(
             "Channels",
-            url="https://t.me/SpotifyStreamMusic",
+            url="https://t.me/Rxvthv",
         ),
-        Button.url("Support", url="https://t.me/SpotifyStream_Id"),
+        Button.url("Support", url="https://t.me/TeamAllBots"),
     ]
 ]
 
@@ -91,9 +91,9 @@ def in_pattern(pattern=None, owner=False, **kwargs):
             if owner and event.sender_id not in owner_and_sudos():
                 res = [
                     await event.builder.article(
-                        title="ᴅᴀɴᴛᴇ ᴜʙᴏᴛ​",
-                        url="https://t.me/SpotifyStreamMusic",
-                        description="ᴅᴀɴᴛᴇ ᴜʙᴏᴛ",
+                        title="ʀʏɴ ᴜʙᴏᴛ​",
+                        url="https://t.me/CariSahabatOnline_Id",
+                        description="ʀʏɴ ᴜʙᴏᴛ",
                         text=MSG,
                         thumb=InputWebDocument(
                             "https://mallucampaign.in/images/img_1708349297.jpg",
@@ -127,7 +127,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                                 title="Unhandled Exception has Occured!",
                                 text=error_text(),
                                 buttons=Button.url(
-                                    "Report", "https://t.me/SpotifyStream_Id"
+                                    "Report", "https://t.me/CariSahabatOnline_Id"
                                 ),
                             )
                         ]
