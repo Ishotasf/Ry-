@@ -14,7 +14,7 @@ START = """
 ◇  /help : Get This Message.
 ◇  /repo : Get Bot's Repo..
 
-Gabung **@SpotifyStreamMusic**
+Gabung **@CariSahabatOnline_Id**
 """
 
 ADMINTOOLS = """**AdminTools**
