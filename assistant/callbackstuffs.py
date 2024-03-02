@@ -340,7 +340,7 @@ async def changes(okk):
             if len(tl_chnglog) > 700:
                 tl_chnglog = f"{tl_chnglog[:700]}..."
                 button.append([Button.inline("Lihat Selesai", "changesall")])
-            await okk.edit("• Menulis Changelog 📝 •")
+            await okk.edit("▢ Menulis Changelog 📝 ▢")
             img = await Carbon(
                 file_name="changelog",
                 code=tl_chnglog,
@@ -348,7 +348,7 @@ async def changes(okk):
                 language="md",
             )
             return await okk.edit(
-                f"**Dante Ubot**{cli}", file=img, buttons=button
+                f"**Ryn Ubot**{cli}", file=img, buttons=button
             )
         except Exception as er:
             LOGS.exception(er)
