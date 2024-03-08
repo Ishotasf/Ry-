@@ -52,8 +52,8 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• Owner", url="https://t.me/Usern4meDoesNotExist404"),
-        Button.url("• Support", url="t.me/SpotifyStream_Id"),
+        Button.url("Owner", url="https://t.me/Usern4meDoestExist404"),
+        Button.url("Support", url="t.me/SpotifyStream_Id"),
     ],
 ]
 
@@ -80,7 +80,7 @@ async def inline_handler(event):
         )
     else:
         result = await event.builder.article(
-            title="Dante Help Menu", text=text, buttons=_main_help_menu
+            title="RynUbot Help Menu", text=text, buttons=_main_help_menu
         )
     await event.answer([result], private=False, cache_time=300, gallery=True)
 
@@ -371,9 +371,9 @@ async def ibuild(e):
                     results = [
                         await builder.document(
                             _pic,
-                            title="Dante Op",
+                            title="RynUbot Op",
                             text=txt,
-                            description="@Usern4meDoesNotExist404",
+                            description="@Usern4meDoestExist404",
                             buttons=btn,
                             link_preview=False,
                         )
@@ -386,10 +386,10 @@ async def ibuild(e):
                     cont = InputWebDocument(pic, 0, mime_type, [])
                 results = [
                     await builder.article(
-                        title="Dante Op",
+                        title="RynUbot Op",
                         type=_type,
                         text=txt,
-                        description="@Usern4meDoesNotExist404",
+                        description="@Usern4meDoestExist404",
                         include_media=include_media,
                         buttons=btn,
                         thumb=cont,
@@ -401,7 +401,7 @@ async def ibuild(e):
         except Exception as er:
             LOGS.exception(er)
     result = [
-        await builder.article("Dante Op", text=txt, link_preview=False, buttons=btn)
+        await builder.article("RynUbot Op", text=txt, link_preview=False, buttons=btn)
     ]
     await e.answer(result)
 
