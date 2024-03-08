@@ -80,11 +80,11 @@ async def _(ping):
 async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    xping = await eor(ping, "`Pinging....`")
+    xping = await eor(ping, "**Pinging....**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await xping.edit(
-        f"**𝗦𝗘𝗣𝗢𝗡𝗚!! 🍭**\n**𝗣𝗜𝗡𝗚* : %sms\n**𝗕𝗢𝗧 𝗨𝗣𝗧𝗜𝗠𝗘** : {uptime}🕛" % (duration)
+        f"**𝗦𝗘𝗣𝗢𝗡𝗚!! 🍭**\n**𝗣𝗜𝗡𝗚** : %sms\n**𝗕𝗢𝗧 𝗨𝗣𝗧𝗜𝗠𝗘** : {uptime}🕛" % (duration)
     )
 
 
