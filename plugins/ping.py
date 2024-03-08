@@ -84,7 +84,7 @@ async def _(ping):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await xping.edit(
-        f"**PONG!! 🍭**\n**Ping** : %sms\n**Bot Uptime** : {uptime}🕛" % (duration)
+        f"**𝗦𝗘𝗣𝗢𝗡𝗚!! 🍭**\n**𝗣𝗜𝗡𝗚* : %sms\n**𝗕𝗢𝗧 𝗨𝗣𝗧𝗜𝗠𝗘** : {uptime}🕛" % (duration)
     )
 
 
@@ -93,11 +93,11 @@ async def _(ping):
 async def _(ping):
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    lping = await eor(ping, "**PING**")
-    await lping.edit("**PING**")
-    await lping.edit("**PING**")
-    await lping.edit("**PING**")
-    await lping.edit("**PONG!**")
+    lping = await eor(ping, "**𝗛𝗔𝗜 👋**")
+    await lping.edit("**𝗜'𝗠 𝗥𝗬𝗡𝗨𝗕𝗢𝗧**")
+    await lping.edit("**𝗦𝗘𝗟𝗔𝗠𝗔𝗧 𝗗𝗔𝗧𝗔𝗡𝗚...**")
+    await lping.edit("**𝗧𝗨𝗡𝗚𝗚𝗨 𝗦𝗘𝗕𝗘𝗡𝗧𝗔𝗥...**")
+    await lping.edit("**𝗠𝗘𝗠𝗨𝗟𝗔𝗜....**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     user = await ping.client.get_me()
@@ -123,9 +123,9 @@ async def _(pong):
     duration = (end - start).microseconds / 1000
     user = await pong.client.get_me()
     await kopong.edit(
-        f"**NIH** "
+        f"**NIH**"
         f"\nRyn UBot `%sms` \n"
-        f"**Yoo!!** "
+        f"**Yoo!!**"
         f"\nSalken! Saya {user.first_name} (tg://user?id={user.id})』 \n" % (duration)
     )
 
@@ -157,7 +157,7 @@ async def _(pong):
 
 @kazu_cmd(pattern="speedtest$")
 async def _(speed):
-    xxnx = await eor(speed, "`Running speed test...`")
+    xxnx = await eor(speed, "**Running speed test...**")
     test = Speedtest()
     test.get_best_server()
     test.download()
