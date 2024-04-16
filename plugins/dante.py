@@ -11,6 +11,8 @@ Perintah Tersedia Untuk UBot Ryn
 •`{i}love`
 
 •`{i}halah`
+
+•`{i}`ryn`
   
 """
 
@@ -75,7 +77,7 @@ async def _(event):
     sleep(1)
     await event.eor("**BELUM MANDI YA UMM 🥹**")
     sleep(1)
-    await event.eor("**SINI AAK MANDIKAN🥹**")
+    await event.eor("**SINI AKU MANDIKAN🥹**")
     sleep(1)
     await event.eor("**DIKIT AJA YAH YAH**")
     sleep(1)
@@ -105,9 +107,9 @@ async def _(event):
     sleep(1)
     await event.eor("**tapi tapi kamu nya imut umm**")
     sleep(1)
-    await event.eor("**pengen doain kamu biar bisa dapatin kamu umm**")
+    await event.eor("**pengen berdoa biar bisa dapatin kamu umm**")
     sleep(1)
-    await event.eor("**HAHAHAHAHAHAHA*"")
+    await event.eor("**HAHAHAHAHAHAHA**")
     sleep(1)
     await event.eor("**BERCANDA KOK**")
     sleep(1)
@@ -124,7 +126,7 @@ async def _(event):
     sleep(1.5)
     await event.eor("**CERITA SANA SINI SOAL HIDUP LU BIAR APA?**")
     sleep(1.5)
-    await event.eor("**CAPAR YA??**")
+    await event.eor("**CAPER YA??**")
     sleep(1.5)
     await event.eor("**DASAR ANAK KOONTOLLLL**")
     sleep(1.5)
@@ -143,3 +145,21 @@ async def _(event):
     await event.eor("**TOLOL CAPAR NYA KELEWATAN BATAS BLOK**")
     sleep(1.5)
     await event.eor("**ANAK GOBLOKK!**")
+
+@kazu_cmd(outgoing=True, pattern="ryn")
+async def _(event):
+    await event.eor("**HAI I'M YOSHIEKI RYN**")
+    sleep(1.5)
+    await event.eor("**SIAPA SI YG GA KENAL GUA??**")
+    sleep(1.5)
+    await event.eor("**PETINGGI KYA GUA LU GA KENAL??**")
+    sleep(1.5)
+    await event.eor("**SINI KENALAN SAMA PETINGGI TELE!.**")
+    sleep(1.5)
+    await event.eor("**BELOM PERNAH KAN KENALAN SAMA PETINGGI TELE**")
+    sleep(1.5)
+    await event.eor("**ULULULU KASIAN BELOM PERNAH**")
+    sleep(1.5) 
+    await event.eor("**PASTI EPEKNYA KECIK MWEHEHE**")
+    sleep(1.5)
+    await event.eor("**CANDA YA GES KALO MAU SERIUS LANGSUNG PC AJA MWEHEHE*"")
