@@ -5,7 +5,7 @@
 # Licensed under the Raphielscape Public License, Version 1.c (the "License");
 # you may not use this file except in compliance with the License.
 #
-"""Userbot module for managing events. One of the main components of the userkazu_bot."""
+"""Userbot module for managing events. One of the main components of the ManageRyUbot"""
 
 import inspect
 import re
@@ -181,7 +181,7 @@ def devs_cmd(**args):
                     date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
 
                     text = "**▢ RYN-UBOT ERROR REPORT ▢**\n\n"
-                    link = "[Group Support](https://t.me/)"
+                    link = "[OWMER](https://t.me/Usern4meDoestExist404)"
                     text += "Jika mau, Anda bisa melaporkan error ini, "
                     text += f"Cukup forward saja pesan ini ke {link}.\n\n"
 
