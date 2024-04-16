@@ -104,7 +104,7 @@ async def _(e):
         return await e.eor(get_string("schdl_2"), time=5)
     user = await e.get_reply_message()
     if user:
-        ev = await e.eor("`Mempromosikan Pengguna yang Dibalas Secara Global`")
+        ev = await e.eor("❏ **Mempromosikan Pengguna Secara Global**\n└ **Pengguna Di Promosikan Secara Global.**")
         ok = e.text.split()
         key = "all"
         if len(ok) > 1 and (("group" in ok[1]) or ("channel" in ok[1])):
@@ -163,7 +163,7 @@ async def _(e):
         k = e.text.split()
         if not k[1]:
             return await eor(
-                e, "`Berikan nama pengguna/id seseorang atau balas ke pengguna.", time=5
+                e, "❏ **Berikan nama pengguna/id seseorang**\n└ **atau balas ke pengguna.**", time=5
             )
         user = k[1]
         if user.isdigit():
@@ -171,8 +171,8 @@ async def _(e):
         try:
             name = await e.client.get_entity(user)
         except BaseException:
-            return await e.eor(f"`Tidak Ada Pengguna Ditemukan Terkait {user}`", time=5)
-        ev = await e.eor(f"`Mempromosikan {name.first_name} globally.`")
+            return await e.eor(f"**Tidak Ada Pengguna Ditemukan Terkait** `{user}`", time=5)
+        ev = await e.eor(f"**Mempromosikan** `{name.first_name}` **globally.**")
         key = "all"
         if len(k) > 2 and (("group" in k[2]) or ("channel" in k[2])):
             key = k[2]
@@ -213,7 +213,7 @@ async def _(e):
     user = await e.get_reply_message()
     if user:
         user.id = user.peer_id.user_id if e.is_private else user.from_id.user_id
-        ev = await e.eor("`Demoting Balasan Pengguna Secara Global`")
+        ev = await e.eor("**Demoting Balasan Pengguna Secara Global**")
         ok = e.text.split()
         key = "all"
         if len(ok) > 1 and (("group" in ok[1]) or ("channel" in ok[1])):
@@ -248,7 +248,7 @@ async def _(e):
         k = e.text.split()
         if not k[1]:
             return await eor(
-                e, "`Berikan nama pengguna/id seseorang atau balas ke pengguna.", time=5
+                e, "❏ **Berikan nama pengguna/id seseorang**\n└ **atau balas ke pengguna.**", time=5
             )
         user = k[1]
         if user.isdigit():
@@ -256,8 +256,8 @@ async def _(e):
         try:
             name = await kazu_bot.get_entity(user)
         except BaseException:
-            return await e.eor(f"`Tidak Ada Pengguna Ditemukan Terkait {user}`", time=5)
-        ev = await e.eor(f"`Demoting {name.first_name} globally.`")
+            return await e.eor(f"**Tidak Ada Pengguna Ditemukan Terkait** `{user}`", time=5)
+        ev = await e.eor(f"**Demoting** `{name.first_name}` **globally.**")
         key = "all"
         if len(k) > 2 and (("group" in k[2]) or ("channel" in k[2])):
             key = k[2]
@@ -291,7 +291,7 @@ async def _(e):
 
 @kazu_cmd(pattern="ungban( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`UnGbanning...`")
+    xx = await e.eor("❏**UnGbanning...**\n└ **Waiting For UnGbanning.**")
     match = e.pattern_match.group(1).strip()
     peer = None
     if e.reply_to_msg_id:
@@ -304,13 +304,13 @@ async def _(e):
         try:
             userid = (await e.client.get_entity(userid)).id
         except Exception as er:
-            return await xx.edit(f"Gagal mendapatkan Pengguna...\nError: {er}")
+            return await xx.edit(f"❏ **Gagal mendapatkan Pengguna...\n└ **Error:** {er}")
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.eor("`Balas beberapa pesan atau tambahkan id mereka.`", time=5)
+        return await xx.eor("❏ **Balas beberapa pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan UnGbanning.**", time=5)
     if not is_gbanned(userid):
-        return await xx.edit("`Pengguna/Saluran tidak di-Gban...`")
+        return await xx.edit("**Pengguna/Saluran tidak di-Gban...**")
     try:
         if not peer:
             peer = await e.client.get_entity(userid)
@@ -349,13 +349,13 @@ async def _(e):
     if isinstance(peer, User):
         await e.client(UnblockRequest(userid))
     await xx.edit(
-        f"`Ungbaned` {name} in {chats} `chats.\nRemoved from gbanwatch.`",
+        f"❏ **Ungbaned** `{name}` **in** `{chats}` **chats.**\n└ **Removed from gbanwatch.**",
     )
 
 
 @kazu_cmd(pattern="gban( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`Gbanning...`")
+    xx = await e.eor("❏ **Gbanning...**\n└ **Waiting For Gbanning.**")
     reason = ""
     if e.reply_to_msg_id:
         userid = (await e.get_reply_message()).sender_id
@@ -380,7 +380,7 @@ async def _(e):
         except IndexError:
             pass
     else:
-        return await xx.eor("`Balas beberapa pesan atau tambahkan id mereka.`", time=5)
+        return await xx.eor("❏ **Balas beberapa pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan Gbanning.**", time=5)
     user = None
     try:
         user = await e.client.get_entity(userid)
@@ -390,13 +390,13 @@ async def _(e):
         name = str(userid)
     chats = 0
     if userid == kazu_bot.uid:
-        return await xx.eor("`Aku tidak bisa membohongi diriku sendiri.`", time=3)
+        return await xx.eor("**Aku tidak bisa membohongi diriku sendiri.**\n└ **Dia Adalah Developer Saya.", time=3)
     elif userid in DEVLIST:
-        return await xx.eor("`Saya tidak dapat melakukan gban pada Pengembang saya.`", time=3)
+        return await xx.eor("**Saya tidak dapat melakukan gban pada Developer saya.**", time=3)
     elif is_gbanned(userid):
         return await eod(
             xx,
-            "`Pengguna sudah di-gban dan ditambahkan ke gbanwatch.`",
+            "**Pengguna sudah di-gban.**/n└ **dan ditambahkan ke gbanwatch.**",
             time=4,
         )
     if e.client._dialogs:
@@ -428,9 +428,9 @@ async def _(e):
     gban(userid, reason)
     if isinstance(user, User):
         await e.client(BlockRequest(userid))
-    gb_msg = f"**#Gbanned** {name} `in {chats} chats and added to gbanwatch!`"
+    gb_msg = f"❏ **Gbanned** `{name}` **in** `{chats}` **chats and added to gbanwatch!.**"
     if reason:
-        gb_msg += f"\n**Reason** : {reason}"
+        gb_msg += f"\n└ **Reason** : {reason}"
     await xx.edit(gb_msg)
 
 
@@ -448,10 +448,10 @@ async def gcast(event):
             msg, btn = get_msg_button(msg)
     else:
         return await eor(
-            event, "`Berikan beberapa teks ke Globally Broadcast atau balas pesan..`"
+            event, "❏ **Berikan beberapa teks ke Globally Broadcast atau balas pesan.**\n└ **Untuk Melakukan Broadcast.**"
         )
 
-    kk = await event.eor("`Sebentar Kalo Limit Jangan Salahin Gua...`")
+    kk = await event.eor("**Sebentar Kalo Limit Jangan Salahin Gua...**")
     er = 0
     done = 0
     err = ""
@@ -513,7 +513,7 @@ async def gcast(event):
                 except BaseException as h:
                     err += f"• {str(h)}" + "\n"
                     er += 1
-    text += f"Berhasil di {done} obrolan, kesalahan {er} obrolan(s)"
+    text += f"❏ **Berhasil Gcast Di** `{done}` **obrolan.**\n└ **Gagal Gcast Di** `{er}` **obrolan(s)**"
     if err != "":
         open("gcast-error.log", "w+").write(err)
         text += f"\Anda dapat melakukan `{HNDLR}kazu gcast-error.log` untuk mengetahui laporan kesalahan."
@@ -534,9 +534,9 @@ async def gucast(event):
             msg, btn = get_msg_button(msg)
     else:
         return await eor(
-            event, "`Berikan beberapa teks ke Globally Broadcast atau balas pesan..`"
+            event, "❏ **Berikan beberapa teks ke Globally Broadcast atau balas pesan.**\n└ **Untuk Melakukan Broadcast User.**"
         )
-    kk = await event.eor("`Sebentar Kalo Limit Jangan Salahin Gua...`")
+    kk = await event.eor("**Sebentar Kalo Limit Jangan Salahin Gua...**")
     er = 0
     done = 0
     if event.client._dialogs:
@@ -566,12 +566,12 @@ async def gucast(event):
                     done += 1
                 except BaseException:
                     er += 1
-    await kk.edit(f"Berhasil di {done} obrolan, kesalahan {er} obrolan(s)")
+    await kk.edit(f"❏ **Berhasil Gcast Di** `{done}` **obrolan.**\n└ **Gagal Gcast Di** `{er}` **obrolan(s)**")
 
 
 @kazu_cmd(pattern="gkick( (.*)|$)", fullsudo=True)
 async def gkick(e):
-    xx = await e.eor("`Gkicking...`")
+    xx = await e.eor("❏ **Gkicking...**\n└ **Waiting For Gkicking.**")
     if e.reply_to_msg_id:
         userid = (await e.get_reply_message()).sender_id
     elif e.pattern_match.group(1).strip():
@@ -579,13 +579,13 @@ async def gkick(e):
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.edit("`Balas beberapa pesan atau tambahkan id mereka.`", time=5)
+        return await xx.edit("❏ **Balas beberapa pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan Gkicking.**", time=5)
     name = (await e.client.get_entity(userid)).first_name
     chats = 0
     if userid == kazu_bot.uid:
-        return await xx.eor("`I can't gkick myself.`", time=3)
+        return await xx.eor("**I can't gkick myself.**", time=3)
     if userid in DEVLIST:
-        return await xx.eor("`I can't gkick my Developers.`", time=3)
+        return await xx.eor("**I can't gkick my Developers.**", time=3)
     if e.client._dialogs:
         dialog = e.client._dialogs
     else:
@@ -598,12 +598,12 @@ async def gkick(e):
                 chats += 1
             except BaseException:
                 pass
-    await xx.edit(f"`Gkicked` [{name}](tg://user?id={userid}) `in {chats} chats.`")
+    await xx.edit(f"**Gkicked** [{name}](tg://user?id={userid}) **in** `{chats}` **chats.**")
 
 
 @kazu_cmd(pattern="gmute( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`Gmuting...`")
+    xx = await e.eor("❏ **Gmuting...**\n└ **Waiting For Gmuting.**")
     if e.reply_to_msg_id:
         userid = (await e.get_reply_message()).sender_id
     elif e.pattern_match.group(1).strip():
@@ -611,15 +611,15 @@ async def _(e):
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.eor("`Balas beberapa pesan atau tambahkan id mereka.`", tome=5, time=5)
+        return await xx.eor("❏ **Balas beberapa pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan Gmuting.**", tome=5, time=5)
     name = await e.client.get_entity(userid)
     chats = 0
     if userid == kazu_bot.uid:
-        return await xx.eor("`I can't gmute myself.`", time=3)
+        return await xx.eor("**I can't gmute myself.**", time=3)
     if userid in DEVLIST:
-        return await xx.eor("`I can't gmute my Developers.`", time=3)
+        return await xx.eor("**I can't gmute my Developers.**", time=3)
     if is_gmuted(userid):
-        return await xx.eor("`User is already gmuted.`", time=4)
+        return await xx.eor("**User is already gmuted.**", time=4)
     if e.client._dialogs:
         dialog = e.client._dialogs
     else:
@@ -633,12 +633,12 @@ async def _(e):
             except BaseException:
                 pass
     gmute(userid)
-    await xx.edit(f"`Gmuted` {inline_mention(name)} `in {chats} chats.`")
+    await xx.edit(f"**Gmuted** {inline_mention(name)} **in** `{chats}` **chats.**")
 
 
 @kazu_cmd(pattern="ungmute( (.*)|$)", fullsudo=True)
 async def _(e):
-    xx = await e.eor("`UnGmuting...`")
+    xx = await e.eor("❏ **UnGmuting...**\n└ **Waiting For UnGmuting.**")
     if e.reply_to_msg_id:
         userid = (await e.get_reply_message()).sender_id
     elif e.pattern_match.group(1).strip():
@@ -646,7 +646,7 @@ async def _(e):
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.eor("`Balas beberapa pesan atau tambahkan id mereka.`", time=5)
+        return await xx.eor("❏ **Balas beberapa pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan UnGmuting.**", time=5)
     name = (await e.client.get_entity(userid)).first_name
     chats = 0
     if not is_gmuted(userid):
@@ -664,7 +664,7 @@ async def _(e):
             except BaseException:
                 pass
     ungmute(userid)
-    await xx.edit(f"`Ungmuted` {inline_mention(name)} `in {chats} chats.`")
+    await xx.edit(f"**Ungmuted** {inline_mention(name)} **i** `{chats}` **chats.**")
 
 
 @kazu_cmd(
@@ -675,7 +675,7 @@ async def list_gengbanned(event):
     x = await event.eor(get_string("com_1"))
     msg = ""
     if not users:
-        return await x.edit("`You haven't GBanned anyone!`")
+        return await x.edit("**You haven't GBanned anyone!**")
     for i in users:
         try:
             name = await event.client.get_entity(int(i))
