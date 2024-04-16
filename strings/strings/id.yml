@@ -550,12 +550,12 @@ pmbot_7: "▢ **Selamat! Anda telah dibatalkan pemblokirannya.**"
 
 # -------------------------- VcBot ------------------------------- #
 
-vcbot_1: "▢ **Daah Mo Turun Banyak Jamet Di Os...**"
+vcbot_1: "▢ **Turun Ah Ga Seru Osnya.**\n└ **Banyak Jamet Di Os.**"
 vcbot_2: "▢ **ERROR:**\n└ `{}`"
 vcbot_3: "▢ **Mengubah Volume menjadi** `{}%`"
 vcbot_4: "▢ **Harap tentukan volume dari 1 hingga 200!**"
-vcbot_5: "▢ **Bergabung kembali dengan obrolan suara ini.**"
-vcbot_6: "▢ **Anda belum terhubung ke obrolan suara!**"
+vcbot_5: "▢ **Welkombek Ygy Dengan Gua Ryn.**\n└ **Naik Lagi Ah Ada Jamet Ga Ya.**"
+vcbot_6: "▢ **Anda belum terhubung.**\n└ **Di OS yg bnyk Jametnya!.**"
 vcbot_7: "▢ **Harap Tunggu... Ini akan memakan waktu.**"
 vcbot_8: "▢ **Berikan daftar putar youtube"
 vcbot_9: "▢ **Apakah Anda Bercanda?\nApa yang Harus Dimainkan?**"
