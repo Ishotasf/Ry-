@@ -167,8 +167,8 @@ def kazu_cmd(
                 LOGS.exception(e)
                 date = strftime("%Y-%m-%d %H:%M:%S", gmtime())
                 naam = get_display_name(chat)
-                ftext = "**Dante Client Error:** `Forward this to` @CariSahabatOnline_Id\n\n"
-                ftext += f"**Dante Version:** `{str(pyver)}"
+                ftext = "**RynUbot Client Erro`Forward this to` @CariSahabatOnline_Id\n\n"
+                ftext += f"**RynUbot Version:** `{str(pyver)}"
                 ftext += "`\n**Userbot Version:** `" + str(kazu_ver)
                 ftext += "`\n**Telethon Version:** `" + str(telever)
                 ftext += f"`\n**Hosted At:** `{HOSTED_ON}`\n\n"
@@ -197,7 +197,7 @@ def kazu_cmd(
                         error_log = await asst.send_file(
                             udB.get_key("LOG_CHANNEL"),
                             file,
-                            caption="**Dante Client Error:** `Forward this to` @SpotifyStream_Id\n\n",
+                            caption="**RynUbot Client Error:** `Forward this to` @SpotifyStream_Id\n\n",
                         )
                 else:
                     error_log = await asst.send_message(
