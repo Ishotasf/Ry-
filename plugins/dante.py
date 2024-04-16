@@ -162,4 +162,4 @@ async def _(event):
     sleep(1.5) 
     await event.eor("**PASTI EPEKNYA KECIK MWEHEHE**")
     sleep(1.5)
-    await event.eor("**CANDA YA GES KALO MAU SERIUS LANGSUNG PC AJA MWEHEHE*"")
+    await event.eor("**CANDA YA GES KALO MAU SERIUS LANGSUNG PC AJA MWEHEHE**")
