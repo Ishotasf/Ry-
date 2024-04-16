@@ -318,7 +318,7 @@ def page_num(index, key):
                 ),
                 Button.inline("Back", data="open"),
                 Button.inline(
-                    "»",
+                    "▷",
                     data=f"uh_{key}_{index+1}",
                 ),
             ]
