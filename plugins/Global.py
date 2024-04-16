@@ -308,7 +308,7 @@ async def _(e):
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.eor("❏ **Balas beberapa pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan UnGbanning.**", time=5)
+        return await xx.eor("❏ **Balas pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan UnGbanning.**", time=5)
     if not is_gbanned(userid):
         return await xx.edit("**Pengguna/Saluran tidak di-Gban...**")
     try:
@@ -380,7 +380,7 @@ async def _(e):
         except IndexError:
             pass
     else:
-        return await xx.eor("❏ **Balas beberapa pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan Gbanning.**", time=5)
+        return await xx.eor("❏ **Balas pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan Gbanning.**", time=5)
     user = None
     try:
         user = await e.client.get_entity(userid)
@@ -448,7 +448,7 @@ async def gcast(event):
             msg, btn = get_msg_button(msg)
     else:
         return await eor(
-            event, "❏ **Berikan beberapa teks ke Globally Broadcast atau balas pesan.**\n└ **Untuk Melakukan Broadcast.**"
+            event, "❏ **Masukan Teks Atau Balas Pesan.**\n└ **Untuk Melakukan Broadcast.**"
         )
 
     kk = await event.eor("**Sebentar Kalo Limit Jangan Salahin Gua...**")
@@ -534,7 +534,7 @@ async def gucast(event):
             msg, btn = get_msg_button(msg)
     else:
         return await eor(
-            event, "❏ **Berikan beberapa teks ke Globally Broadcast atau balas pesan.**\n└ **Untuk Melakukan Broadcast User.**"
+            event, "❏ **Masukan Teks Atau Balas Pesan.**\n└ **Untuk Melakukan Broadcast User.**"
         )
     kk = await event.eor("**Sebentar Kalo Limit Jangan Salahin Gua...**")
     er = 0
@@ -579,7 +579,7 @@ async def gkick(e):
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.edit("❏ **Balas beberapa pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan Gkicking.**", time=5)
+        return await xx.edit("❏ **Balas pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan Gkicking.**", time=5)
     name = (await e.client.get_entity(userid)).first_name
     chats = 0
     if userid == kazu_bot.uid:
@@ -611,7 +611,7 @@ async def _(e):
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.eor("❏ **Balas beberapa pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan Gmuting.**", tome=5, time=5)
+        return await xx.eor("❏ **Balas pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan Gmuting.**", tome=5, time=5)
     name = await e.client.get_entity(userid)
     chats = 0
     if userid == kazu_bot.uid:
@@ -646,7 +646,7 @@ async def _(e):
     elif e.is_private:
         userid = e.chat_id
     else:
-        return await xx.eor("❏ **Balas beberapa pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan UnGmuting.**", time=5)
+        return await xx.eor("❏ **Balas pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan UnGmuting.**", time=5)
     name = (await e.client.get_entity(userid)).first_name
     chats = 0
     if not is_gmuted(userid):
@@ -718,7 +718,7 @@ async def gstat_(e):
         except Exception as err:
             return await xx.eor(f"{err}", time=10)
     else:
-        return await xx.eor("`Balas beberapa pesan atau tambahkan id mereka.`", time=5)
+        return await xx.eor("❏ **Balas pesan atau tambahkan id mereka.**\n└ **Untuk Melakukan Gstats.**", time=5)
     name = (await e.client.get_entity(userid)).first_name
     msg = f"**{name} is "
     is_banned = is_gbanned(userid)
