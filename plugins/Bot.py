@@ -345,7 +345,7 @@ async def _(e):
         x = await asst.send_file(
             udB.get_key("LOG_CHANNEL"),
             KAZUPIC(),
-            caption="• **Pembaruan tersedia** •",
+            caption="**Pembaruan tersedia**",
             force_document=False,
             buttons=Button.inline("Changelog", data="changes"),
         )
@@ -369,7 +369,7 @@ async def updava(event):
     await asst.send_file(
         udB.get_key("LOG_CHANNEL"),
         KAZUPIC(),
-        caption="• **Pembaruan tersedia** •",
+        caption="**Pembaruan tersedia**",
         force_document=False,
         buttons=Button.inline("Changelog", data="changes"),
     )
