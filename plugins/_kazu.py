@@ -59,7 +59,7 @@ async def useAyra(rs):
     msg = await asst.send_message(
         LOG_CHANNEL,
         KAZUSTRING,
-        file="https://mallucampaign.in/images/img_1708341080.jpg",
+        file="https://mallucampaign.in/images/img_1713265659.jpg",
         buttons=button,
     )
     if not (rs.chat_id == LOG_CHANNEL and rs.client._bot):
