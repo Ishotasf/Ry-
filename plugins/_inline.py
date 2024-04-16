@@ -126,7 +126,7 @@ async def setting(event):
                 Button.inline("•Stats•", data="alive"),
                 Button.inline("•Uᴘᴅᴀᴛᴇ•", data="doupdate"),
             ],
-            [Button.inline("«", data="open")],
+            [Button.inline("◁", data="open")],
         ],
     )
 
@@ -168,7 +168,7 @@ async def uptd_plugin(event):
                 help_ += "\n"
     if not help_:
         help_ = f"{file} has no Detailed Help!"
-    help_ += "\n▢ ᴅᴀɴᴛᴇ ᴜʙᴏᴛ"
+    help_ += "\n▢ ʀʏɴ ᴜʙᴏᴛ"
     buttons = []
     if inline_pic():
         data = f"sndplug_{key}_{file}"
@@ -187,7 +187,7 @@ async def uptd_plugin(event):
         data += f"|{index}"
     buttons.append(
         [
-            Button.inline("«", data=data),
+            Button.inline("◁", data=data),
         ]
     )
     try:
@@ -218,7 +218,7 @@ async def _(event):
             file="kazu_updates.txt",
             buttons=[
                 [Button.inline("• Uᴘᴅᴀᴛᴇ Nᴏᴡ •", data="updatenow")],
-                [Button.inline("«", data="ownr")],
+                [Button.inline("◁", data="ownr")],
             ],
         )
         remove("kazu_updates.txt")
@@ -227,7 +227,7 @@ async def _(event):
             changelog_str,
             buttons=[
                 [Button.inline("Update Now", data="updatenow")],
-                [Button.inline("«", data="ownr")],
+                [Button.inline("◁", data="ownr")],
             ],
             parse_mode="html",
         )
@@ -260,7 +260,7 @@ async def _(e):
     button = InButtons.copy()
     button.append(
         [
-            Button.inline("«", data="open"),
+            Button.inline("◁", data="open"),
         ],
     )
     await e.edit(buttons=button, link_preview=False)
@@ -313,7 +313,7 @@ def page_num(index, key):
         new_.append(
             [
                 Button.inline(
-                    "«",
+                    "◁",
                     data=f"uh_{key}_{index-1}",
                 ),
                 Button.inline("Back", data="open"),
