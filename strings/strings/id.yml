@@ -160,8 +160,8 @@ wspr_5: "Anda tidak dapat melakukan ini"
 
 # afk
 afk_1: "▢ **Developer Saya Sudah Tidak Lagi AFK**\n**Karena ~** `{}`"
-afk_2: "▢ **AFK**\n└ **AFK Mode** `False`\n└ **AFK untuk** `{}`"
-afk_3: "▢ **Developer saya lagi AFK.**\n└ **Terakhir dilihat** `{}` **yang lalu.**\n└ **Karena:** `{}`"
+afk_2: "▢ **AFK**\n└ **AFK Mode** `False`\n **AFK Hingga** `{}`"
+afk_3: "▢ **Developer saya lagi AFK.**\n└ **Terakhir dilihat** `{}` **yang lalu.**\n **Karena:** `{}`"
 afk_4: "▢ **Developer Saya lagi AFK.**\n└ **Terakhir dilihat** `{}` **yang lalu.**"
 afk_5: "▢ **AFK**\n└ **Karena:** `{}`"
 afk_6: "▢ Bye Bye gw Afk dulu!"
