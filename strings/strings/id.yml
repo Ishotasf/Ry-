@@ -159,7 +159,7 @@ wspr_4: "Pengguna {} Tidak Ditemukan\nMohon Cari Lagi"
 wspr_5: "Anda tidak dapat melakukan ini"
 
 # afk
-afk_1: "▢ **Developer Saya Sudah Tidak Lagi AFK**\n**Karena ~** `{}`"
+afk_1: "▢ **Dev Kembali Aktif Dari AFK.**\n└ **Terakhir Di lihat ~** `{}`"
 afk_2: "▢ **AFK**\n└ **AFK Mode** `False`\n **AFK Hingga** `{}`"
 afk_3: "▢ **Developer saya lagi AFK.**\n└ **Terakhir dilihat** `{}` **yang lalu.**\n **Karena:** `{}`"
 afk_4: "▢ **Developer Saya lagi AFK.**\n└ **Terakhir dilihat** `{}` **yang lalu.**"
