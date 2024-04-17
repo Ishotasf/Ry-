@@ -516,7 +516,7 @@ async def gcast(event):
     text += f"❏ **Berhasil Gcast Di** `{done}` **Group.**\n└ **Gagal Gcast Di** `{er}` **Group.**"
     if err != "":
         open("gcast-error.log", "w+").write(err)
-        text += f"`Done Ya Ngab.`"
+        text += f"`Kamu dapat melakukan {HNDLR}kazu gcast-error.log untuk mengetahui laporan kesalahan.`"
     
 
 @kazu_cmd(pattern="gucast( (.*)|$)", fullsudo=True)
