@@ -197,4 +197,3 @@ async def _(pong):
     sleep(3)
     await xx.edit("**𝙿𝙸𝙽𝙶!**\n`%sms`" % (duration))
 
-    )
