@@ -196,4 +196,33 @@ async def _(pong):
     await xx.edit("Tunggu...")
     sleep(3)
     await xx.edit("**𝙿𝙸𝙽𝙶!**\n`%sms`" % (duration))
+    )
 
+
+@kazu_cmd(pattern=r"ryping$")
+@devs_cmd(incoming=True, from_users=DEVLIST, pattern=r"^Kaz$")
+async def _(pong):
+    uptime = await get_readable_time((time.time() - StartTime))
+    start = datetime.now()
+    ryping = await eor(pong, "Hai, I'm RynUbot.")
+    await ryping.edit("**░░░░░░░░░░░░░░░░░░░░ 0℅**")
+    await ryping.edit("**██░░░░░░░░░░░░░░░░░░ 10℅**")
+    await ryping.edit("**███░░░░░░░░░░░░░░░░░ 30℅**")
+    await ryping.edit("**████░░░░░░░░░░░░░░░░ 40℅**")
+    await ryping.edit("**█████░░░░░░░░░░░░░░░ 45℅**")
+    await ryping.edit("**██████░░░░░░░░░░░░░░ 50℅**")
+    await ryping.edit("**███████░░░░░░░░░░░░░ 58℅**")
+    await ryping.edit("**████████░░░░░░░░░░░░ 65℅**")
+    await ryping.edit("**█████████░░░░░░░░░░░ 70℅**")
+    await ryping.edit("**█████████████░░░░░░░ 75℅**")
+    await ryping.edit("**████████████████░░░░ 83℅**")
+    await ryping.edit("**██████████████████░░ 95℅**")
+    await ryping.edit("**████████████████████ 100℅**")
+
+    end = datetime.now()
+    duration = (end - start).microseconds / 1000
+    await ryping.edit(
+        f"❏ **RynUbot**\n"
+        f"├• **RynPong** - `%sms`\n"
+        f"├• **RynUptime -** `{uptime}` \n"
+        f"└• **RynUbot :** {client.me.mention}" % (duration)
