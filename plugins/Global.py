@@ -450,7 +450,6 @@ async def gcast(event):
         return await eor(
             event, "❏ **Masukan Teks Atau Balas Pesan.**\n└ **Untuk Melakukan Broadcast.**"
         )
-
     kk = await event.eor("❏ **Waiting For Gcasting...\n└ Kalo Limit Jgn Salahin RynUbot.**")
     er = 0
     done = 0
