@@ -106,7 +106,7 @@ async def _(ping):
         f"`%sms` \n"
         f"**Uptime -** "
         f"`{uptime}` \n"
-        f"**Master :** [{user.first_name}](tg://user?id={user.id})" % (duration)
+        f"**Master :** {user.first_name} (tg://user?id={user.id})" % (duration)
     )
 
 
