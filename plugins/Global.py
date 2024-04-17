@@ -451,7 +451,7 @@ async def gcast(event):
             event, "❏ **Masukan Teks Atau Balas Pesan.**\n└ **Untuk Melakukan Broadcast.**"
         )
 
-    kk = await event.eor("**Sebentar Kalo Limit Jangan Salahin Gua...**")
+    kk = await event.eor("❏ **Waiting For Gcasting...\n└ Kalo Limit Jgn Salahin RynUbot.**")
     er = 0
     done = 0
     err = ""
@@ -513,12 +513,8 @@ async def gcast(event):
                 except BaseException as h:
                     err += f"• {str(h)}" + "\n"
                     er += 1
-    text += f"❏ **Berhasil Gcast Di** `{done}` **obrolan.**\n└ **Gagal Gcast Di** `{er}` **obrolan(s)**"
-    if err != "":
-        open("gcast-error.log", "w+").write(err)
-        text += f"\Anda dapat melakukan `{HNDLR}kazu gcast-error.log` untuk mengetahui laporan kesalahan."
-    await kk.edit(text)
-
+    text += f"❏ **Berhasil Gcast Di** `{done}` **Group.**\n└ **Gagal Gcast Di** `{er}` **Group.**"
+    
 
 @kazu_cmd(pattern="gucast( (.*)|$)", fullsudo=True)
 async def gucast(event):
@@ -536,7 +532,7 @@ async def gucast(event):
         return await eor(
             event, "❏ **Masukan Teks Atau Balas Pesan.**\n└ **Untuk Melakukan Broadcast User.**"
         )
-    kk = await event.eor("**Sebentar Kalo Limit Jangan Salahin Gua...**")
+    kk = await event.eor("❏ **Waiting For Ugcasting...\n└ Kalo Limit Jgn Salahin RynUbot.**")
     er = 0
     done = 0
     if event.client._dialogs:
@@ -566,7 +562,7 @@ async def gucast(event):
                     done += 1
                 except BaseException:
                     er += 1
-    await kk.edit(f"❏ **Berhasil Gcast Di** `{done}` **obrolan.**\n└ **Gagal Gcast Di** `{er}` **obrolan(s)**")
+    await kk.edit(f"❏ **Berhasil Ugcast Di** `{done}` **Pengguna.**\n└ **Gagal Ugcast Di** `{er}` **Pengguna.**")
 
 
 @kazu_cmd(pattern="gkick( (.*)|$)", fullsudo=True)
