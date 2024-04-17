@@ -196,6 +196,7 @@ async def _(pong):
     await xx.edit("Tunggu...")
     sleep(3)
     await xx.edit("**𝙿𝙸𝙽𝙶!**\n`%sms`" % (duration))
+    
     )
 
 
