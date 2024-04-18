@@ -26,6 +26,14 @@
             "description": "Isinya yg bener contoh -100"
             "value": ""
         },
+        "REDIS_URL": {
+            "description": "Isi cuy jgn di kosongin"
+            "value": ""
+        },
+        "REDIS_PASSWORD": {
+            "description": "Isi cuy jgn di kosongin"
+            "value": ""
+        },
         "BOT_TOKEN": {
             "description": "buat bot nya di @BotFather kalo udah di buat ambil tokennya"
             "value": ""
