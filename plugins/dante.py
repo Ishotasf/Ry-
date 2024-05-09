@@ -13,6 +13,8 @@ Perintah Tersedia Untuk UBot Ryn
 •`{i}halah`
 
 •`{i}`ryn`
+
+•`{i}`virtual`
   
 """
 
