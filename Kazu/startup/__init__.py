@@ -35,13 +35,13 @@ def where_hosted():
 
 
 if run_as_module:
-    from telethon import __version__
+    from telethon import *
     from telethon.tl.alltlobjects import LAYER
 
     from ..version import __version__ as __kazu__
     from ..version import kazu_version
 
-    file = f"Dante{sys.argv[6]}.log" if len(sys.argv) > 6 else "kazu.log"
+    file = f"RynUbot{sys.argv[6]}.log" if len(sys.argv) > 6 else "kazu.log"
 
     if os.path.exists(file):
         os.remove(file)
