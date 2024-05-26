@@ -106,11 +106,11 @@ async def _(ping):
         f"`%sms` \n"
         f"**Uptime -** "
         f"`{uptime}` \n"
-        f"**Master :** {user.first_name} (tg://user?id={user.id})" % (duration)
+        f"**Owner :** {user.first_name}
     )
 
 
-@kazu_cmd(pattern="Rping$")
+@kazu_cmd(pattern="rping$")
 @devs_cmd(incoming=True, from_users=DEVLIST, pattern=r"^Kping$")
 async def _(pong):
     await get_readable_time((time.time() - StartTime))
@@ -126,14 +126,11 @@ async def _(pong):
         f"**NIH**"
         f"\nRyn UBot `%sms` \n"
         f"**Yoo!!**"
-        f"\nSalken! Saya {user.first_name} (tg://user?id={user.id})』 \n" % (duration)
+        f"\nSalken! Saya {user.first_name}
     )
 
 
-# .keping & kping Coded by Koala
-
-
-@kazu_cmd(pattern=r"Ryn$")
+@kazu_cmd(pattern=r"ryn$")
 @devs_cmd(incoming=True, from_users=DEVLIST, pattern=r"^Kaz$")
 async def _(pong):
     uptime = await get_readable_time((time.time() - StartTime))
