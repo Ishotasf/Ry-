@@ -35,7 +35,7 @@ def where_hosted():
 
 
 if run_as_module:
-    from telethon import *
+    from telethon import __version__
     from telethon.tl.alltlobjects import LAYER
 
     from ..version import __version__ as __kazu__
